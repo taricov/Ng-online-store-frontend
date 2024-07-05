@@ -1,3 +1,6 @@
+import { Observable } from 'rxjs';
+import { PaginationParams, Products } from 'types/types';
+import { ApiService } from './api.service';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +8,17 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
+
+
+  // Getting products from the API
+  getProducts = (
+    url: string,
+    params: PaginationParams
+  ): Observable<Products> => {
+    return this.apiService.get(url, {
+      params,
+      responseType: 'json',
+    });
+  };
 }
