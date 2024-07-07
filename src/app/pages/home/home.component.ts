@@ -2,11 +2,17 @@ import { Component } from '@angular/core';
 import { ProductService } from '@services/product.service';
 import { Product, Products } from 'types/types';
 import { ProductComponent } from '@components/product/product.component';
+import { BannerComponent } from '@components/banner/banner.component';
+import { HeroComponent } from '@components/hero/hero.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
+    CommonModule,
+    BannerComponent,
+    HeroComponent,
     ProductComponent,
   ],
   templateUrl: './home.component.html',
