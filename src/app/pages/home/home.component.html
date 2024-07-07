@@ -1,5 +1,7 @@
 <app-banner />
+<div class="container pt-[10%] flex flex-col justify-center">
 <app-hero />
-<div class="container grid grid-cols-3 gap-2 place-items-center">
+<div class="flex flex-wrap justify-center space-x-3 space-y-5">
   <app-product *ngFor="let product of products" [product]="product"/>
+</div>
 </div>
