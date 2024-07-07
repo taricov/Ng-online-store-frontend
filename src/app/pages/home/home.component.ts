@@ -1,17 +1,13 @@
 import { Component } from '@angular/core';
 import { ProductService } from '@services/product.service';
 import { Product, Products } from 'types/types';
-import { AccordionModule } from 'primeng/accordion';
 import { ProductComponent } from '@components/product/product.component';
-import { BannerComponent } from '@components/banner/banner.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    AccordionModule,
     ProductComponent,
-    BannerComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
